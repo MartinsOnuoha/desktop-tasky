@@ -1,4 +1,7 @@
-import { app, protocol, BrowserWindow } from 'electron';
+/* eslint-disable import/no-extraneous-dependencies */
+import {
+  app, protocol, BrowserWindow, WebPreferences,
+} from 'electron';
 import { createProtocol } from 'vue-cli-plugin-electron-builder/lib';
 import installExtension, { VUEJS_DEVTOOLS } from 'electron-devtools-installer';
 
@@ -9,22 +12,30 @@ protocol.registerSchemesAsPrivileged([
   { scheme: 'app', privileges: { secure: true, standard: true } },
 ]);
 
+interface WebPreferencesExtended extends WebPreferences {
+  enableRemoteModule: boolean;
+}
+
+const webPref: WebPreferencesExtended = {
+
+  // Required for Spectron testing
+  enableRemoteModule: !!process.env.IS_TEST,
+
+  // Use pluginOptions.nodeIntegration, leave this alone
+  /*
+  See nklayman.github.io/vue-cli-plugin-electron-builder/guide/security.html#node-integration
+  */
+  nodeIntegration: (process.env
+    .ELECTRON_NODE_INTEGRATION as unknown) as boolean,
+  contextIsolation: !process.env.ELECTRON_NODE_INTEGRATION,
+};
+
 async function createWindow() {
   // Create the browser window.
   const win = new BrowserWindow({
     width: 800,
     height: 600,
-    webPreferences: {
-
-      // Required for Spectron testing
-      enableRemoteModule: !!process.env.IS_TEST,
-
-      // Use pluginOptions.nodeIntegration, leave this alone
-      // See nklayman.github.io/vue-cli-plugin-electron-builder/guide/security.html#node-integration for more info
-      nodeIntegration: (process.env
-        .ELECTRON_NODE_INTEGRATION as unknown) as boolean,
-      contextIsolation: !process.env.ELECTRON_NODE_INTEGRATION,
-    },
+    webPreferences: webPref,
   });
 
   if (process.env.WEBPACK_DEV_SERVER_URL) {
@@ -61,8 +72,8 @@ app.on('ready', async () => {
     // Install Vue Devtools
     try {
       await installExtension(VUEJS_DEVTOOLS);
-    } catch (e) {
-      console.error('Vue Devtools failed to install:', e.toString());
+    } catch (e: unknown) {
+      console.error('Vue Devtools failed to install:', (e as { toString(): void }).toString());
     }
   }
   createWindow();
