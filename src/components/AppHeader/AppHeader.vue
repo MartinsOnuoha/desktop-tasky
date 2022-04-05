@@ -22,19 +22,14 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import { LocaleMessage } from 'vue-i18n';
+import { AppMenuItem } from '@/types/menu';
 import AppLogo from '../AppLogo.vue';
-
-interface MenuItem {
-  name: LocaleMessage,
-  key?: string | LocaleMessage
-}
 
 export default Vue.extend({
   components: { AppLogo },
   name: 'AppHeader',
   computed: {
-    menuItems(): MenuItem[] {
+    menuItems(): AppMenuItem[] {
       return [
         { name: this.$t('header.nav.tasks'), key: this.$t('header.nav.tasks') },
         { name: this.$t('header.nav.projects'), key: this.$t('header.nav.projects') },

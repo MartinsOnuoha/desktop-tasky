@@ -1,6 +1,3 @@
-/**
- * @jest-environment node
- */
 import spectron from 'spectron';
 import { testWithSpectron } from 'vue-cli-plugin-electron-builder';
 
