@@ -4,7 +4,7 @@ import AppLogo from '@/components/AppLogo.vue';
 
 describe('HelloWorld.vue', () => {
   it('renders props.msg when passed', () => {
-    const menuItems: any = [{ name: '' }];
+    const menuItems: unknown = [{ name: '' }];
 
     const wrapper = shallowMount(AppHeader, {
       computed: {
