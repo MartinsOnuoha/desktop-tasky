@@ -8,9 +8,9 @@
     }
     &-item {
       @apply p-4 font-semibold cursor-pointer transition-colors;
-      &:hover {
-        @apply text-primary;
-      }
+      // &:hover {
+      //   @apply text-primary;
+      // }
     }
   }
 }
