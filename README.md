@@ -1,4 +1,8 @@
-# Destop Tasky
+# Desktop Tasky
+
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
+Customizable Desktop Task Manager built in Vue
 
 ## Project setup
 
