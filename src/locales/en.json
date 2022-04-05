@@ -1,0 +1,9 @@
+{
+  "header": {
+    "nav": {
+      "tasks": "Tasks",
+      "projects": "Projects",
+      "calendar": "Calendar"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.appHeader {
+  @apply p-2 shadow-sm flex;
+
+  &__nav {
+    @apply ml-10;
+    nav ul {
+      @apply flex text-gray;
+    }
+    &-item {
+      @apply p-4 font-semibold cursor-pointer transition-colors;
+      &:hover {
+        @apply text-primary;
+      }
+    }
+  }
+}

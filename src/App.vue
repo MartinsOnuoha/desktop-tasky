@@ -1,17 +1,25 @@
 <template>
   <div id="app">
-    <app-logo />
+    <app-header />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-import AppLogo from '@/components/AppLogo.vue';
+import AppHeader from '@/components/AppHeader/AppHeader.vue';
+// import AppLogo from '@/components/AppLogo.vue';
 
 export default Vue.extend({
   name: 'App',
   components: {
-    AppLogo,
+    AppHeader,
+    // AppLogo,
   },
 });
 </script>
+
+<style lang="scss">
+#app {
+  @apply h-screen;
+}
+</style>
