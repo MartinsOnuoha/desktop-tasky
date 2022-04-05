@@ -1,5 +1,5 @@
 {
-  "name": "custom-todo",
+  "name": "customize-todo",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,7 +12,8 @@
     "i18n:report": "vue-cli-service i18n:report --src \"./src/**/*.?(js|vue)\" --locales \"./src/locales/**/*.json\"",
     "postinstall": "electron-builder install-app-deps",
     "postuninstall": "electron-builder install-app-deps",
-    "commit": "cz"
+    "commit": "cz",
+    "prepare": "husky install"
   },
   "main": "background.js",
   "dependencies": {
@@ -40,11 +41,13 @@
     "@vue/test-utils": "^1.0.3",
     "autoprefixer": "^9",
     "cz-conventional-changelog": "3.3.0",
+    "cz-emoji-conventional": "^1.0.1",
     "electron": "^18.0.1",
     "electron-devtools-installer": "^3.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-vue": "^6.2.2",
+    "husky": "^7.0.0",
     "node-sass": "^4.12.0",
     "postcss": "^7",
     "sass-loader": "^8.0.2",
@@ -57,7 +60,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
+      "path": "./node_modules/cz-emoji-conventional"
     }
   }
 }
