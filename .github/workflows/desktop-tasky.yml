@@ -32,6 +32,10 @@ jobs:
       run: yarn lint
     - name: Run Unit tests
       run: yarn test:unit
+    - name: Set GITHUB_GH_TOKEN
+      run: export GH_TOKEN=${{ GH_TOKEN }}
+    - name: Check GH_TOKEN
+      run: echo $GH_TOKEN
     - name: Run UI build
       run: yarn build
     - name: Run electron build

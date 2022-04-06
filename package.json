@@ -1,5 +1,11 @@
 {
-  "name": "customize-todo",
+  "name": "desktop-tasky",
+  "description": "A good old customizable desktop task manager app",
+  "author": {
+    "name": "Martins Onuoha",
+    "email": "martinsvictor.nd@gmail.com",
+    "url": "https://github.com/MartinsOnuoha"
+  },
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -57,6 +63,9 @@
     "vue-cli-plugin-electron-builder": "~2.1.1",
     "vue-cli-plugin-i18n": "~2.3.1",
     "vue-template-compiler": "^2.6.11"
+  },
+  "resolutions": {
+    "electron-builder": "23.0.2"
   },
   "config": {
     "commitizen": {
