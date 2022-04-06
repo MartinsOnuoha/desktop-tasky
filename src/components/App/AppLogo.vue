@@ -1,5 +1,5 @@
 <template>
-  <img :width="width" src="../assets/logo.svg" alt="" srcset="">
+  <img :width="width" :src="require('@/assets/logo.svg')" alt="" srcset="">
 </template>
 
 <script lang="ts">

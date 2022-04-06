@@ -5,5 +5,11 @@
       "projects": "Projects",
       "calendar": "Calendar"
     }
+  },
+  "page": {
+    "tasks": {
+      "title": "My Tasks",
+      "addTask": "Create task"
+    }
   }
 }

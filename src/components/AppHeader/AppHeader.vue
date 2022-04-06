@@ -23,7 +23,7 @@
 <script lang="ts">
 import Vue from 'vue';
 import { AppMenuItem } from '@/types/menu';
-import AppLogo from '../AppLogo.vue';
+import AppLogo from '@/components/App/AppLogo.vue';
 
 export default Vue.extend({
   components: { AppLogo },

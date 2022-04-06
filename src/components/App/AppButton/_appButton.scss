@@ -1,0 +1,10 @@
+.appButton {
+  @apply p-2 rounded-md text-xs pl-5 pr-5;
+  min-width: 80px;
+  &__primary {
+    @apply bg-primary text-white transition-colors;
+    &:hover {
+      @apply bg-white shadow-sm text-primary;
+    }
+  }
+}
