@@ -26,7 +26,13 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: yarn lint
-    - run: yarn test:unit
-    - run: yarn build --if-present
-    - run: yarn electron:build
+    - name: Install dependencies
+      run: yarn install
+    - name: Lint files
+      run: yarn lint
+    - name: Run Unit tests
+      run: yarn test:unit
+    - name: Run UI build
+      run: yarn build --if-present
+    - name: Run electron build
+      run: yarn electron:build --if-present
