@@ -2,6 +2,8 @@
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
+![GithubCI](https://github.com/MartinsOnuoha/desktop-tasky/actions/workflows/desktop-tasky.yml/badge.svg)
+
 Customizable Desktop Task Manager built in Vue
 
 ## Project setup

@@ -33,6 +33,6 @@ jobs:
     - name: Run Unit tests
       run: yarn test:unit
     - name: Run UI build
-      run: yarn build --if-present
+      run: yarn build
     - name: Run electron build
-      run: yarn electron:build --if-present
+      run: yarn electron:build
