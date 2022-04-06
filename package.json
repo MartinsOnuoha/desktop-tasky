@@ -62,5 +62,6 @@
     "commitizen": {
       "path": "./node_modules/cz-emoji-conventional"
     }
-  }
+  },
+  "license": "MIT"
 }

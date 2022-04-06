@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils';
 import AppHeader from '@/components/AppHeader/AppHeader.vue';
-import AppLogo from '@/components/AppLogo.vue';
+import AppLogo from '@/components/App/AppLogo.vue';
 
 describe('HelloWorld.vue', () => {
   it('renders props.msg when passed', () => {
