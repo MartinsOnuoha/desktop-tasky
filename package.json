@@ -54,7 +54,7 @@
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-vue": "^6.2.2",
     "husky": "^7.0.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "postcss": "^7",
     "sass-loader": "^8.0.2",
     "spectron": "15.0.0",
